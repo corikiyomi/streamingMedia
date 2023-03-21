@@ -1,0 +1,12 @@
+html {
+    background-color: #020659;
+    color: #fff;
+}
+
+body {
+    margin: 0 auto;
+}
+
+nav a:hover {
+    background-color: #590242;
+}
