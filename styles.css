@@ -1,12 +1,107 @@
+/*********************************** Global Styles *******************************/
+
 html {
     background-color: #020659;
     color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
     margin: 0 auto;
+    padding: 0 100px;
+}
+
+main {
+    margin-top: 0px;
+    background-color: #fff;
+    color: #590242;
+    padding: 50px 20px;
+}
+
+/*********************************** Header / Nav ************************************/
+header {
+    background-color: #030A83;
+    padding: 10px 50px;
+    display: block;
+    position: relative;
+    top: 80px;
+}
+
+.smallCaps {
+    font-variant: small-caps;
+    font-size: 2em;
+    width: 8em;
+    text-align: left;
+    position: relative;
+    right: 100px;
+}
+
+nav {
+    background-color: #020873;
+    height: 80px;
+    width: 100%;
+    padding-top: 10px;
+    margin-right: 40px;
+    position: relative;
+    bottom: 145px;
+}
+
+nav ul {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav li {
+    list-style: none;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
 }
 
 nav a:hover {
+    display: block;
     background-color: #590242;
+}   
+
+/*********************************** Trending Songs **********************************/
+#trendingSongs {
+    display: flex;
+    flex-flow: row nowrap;
 }
+
+#trendingSongs h3 {
+    display: block;
+}
+#trendingSongs button {
+    position: absolute;
+    top: 800px;
+    left: 1200px;
+    margin-top: 10px;
+}
+
+
+/*********************************** Your Playlists **********************************/
+/* #yourPlaylists, #curatedPlaylists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#yourPlaylists {
+    grid-column-start: 1;
+} */
+
+
+/*********************************** Curated Playlists *******************************/
+/* #curatedPlaylists {
+    grid-column-start: 2;
+} */
+
+
+/*********************************** Footer ******************************************/
