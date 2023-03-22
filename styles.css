@@ -9,10 +9,11 @@ html {
 body {
     margin: 0 auto;
     padding: 0 100px;
+    width: 834px;
 }
 
 main {
-    margin-top: 0px;
+    margin-top: -10px;
     background-color: #fff;
     color: #590242;
     padding: 50px 20px;
@@ -20,20 +21,27 @@ main {
 
 /*********************************** Header / Nav ************************************/
 header {
-    background-color: #030A83;
+    /* background-color: #030A83; */
     padding: 10px 50px;
     display: block;
     position: relative;
     top: 80px;
+    background-image: linear-gradient(to right, #2104D9, #000);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .smallCaps {
+    display: block;
     font-variant: small-caps;
-    font-size: 2em;
+    font-size: 1.5em;
     width: 8em;
     text-align: left;
     position: relative;
-    right: 100px;
+    right: 50px;
 }
 
 nav {
@@ -70,20 +78,67 @@ nav a:hover {
     background-color: #590242;
 }   
 
+
 /*********************************** Trending Songs **********************************/
+
 #trendingSongs {
     display: flex;
     flex-flow: row nowrap;
+    overflow: hidden;
 }
 
-#trendingSongs h3 {
+#trendingSongs h2 {
     display: block;
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    top: 250px;
+    text-transform: uppercase;
 }
+
 #trendingSongs button {
     position: absolute;
-    top: 800px;
-    left: 1200px;
+    top: 665px;
+    left: 975px;
     margin-top: 10px;
+    background-color: #590242;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+dt {
+    font-style: italic;
+}
+
+.songInfo {
+    display: block;
+    width: 296px;
+    background-color: lightgrey;
+    position: absolute;
+    top: 545px;
+    padding-left: 15px;
+}
+
+.songTitle {
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+figure {
+    position: relative;
+    bottom: 200px;
+    right: 34px;
+    opacity: 50%;
+}
+
+dt,dl {
+    display: inline-block;
 }
 
 
