@@ -4,6 +4,10 @@ html {
     background-color: #020659;
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+        box-sizing: border-box;
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
 }
 
 body {
@@ -81,7 +85,7 @@ nav a:hover {
 
 /*********************************** Trending Songs **********************************/
 
-#trendingSongs {
+/* #trendingSongs {
     display: flex;
     flex-flow: row nowrap;
     overflow: scroll;
@@ -141,8 +145,66 @@ figure {
 
 dt,dl {
     display: inline-block;
+} */
+
+#trendingSongs {
+    display: flex;
+    width: 100%;
+    max-width: 834px;
+    overflow: scroll;
+    border: 2px solid pink;
+    margin-top: 20px;
 }
 
+#trendingSongs h2 {
+    display: flex;
+    position: absolute;
+    padding: 20px;
+    top: 200px;
+}
+
+#trendingSongs button {
+    margin-top: 10px;
+    background-color: #590242;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+
+.songInfo {
+    display: inline-block;
+    width: 291px;
+    background: lightgray;
+    padding-left: 20px;
+    position: relative;
+    top: 380px;
+}
+
+.songTitle {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+figure {
+    position: relative;
+    right: 34px;
+    bottom: 180px;
+    opacity: 55%;
+}
+
+dt, dl {
+    display: inline-block;
+}
+
+dt {
+    font-style: italic;
+}
+
+#Aloma, #myRoad, #Papaya, #Smoothies, #successfulPerformance {
+    position: relative;
+    bottom: 100px;
+}
 /*********************************** Your Playlists **********************************/
 
 /* #yourPlaylists {
@@ -206,12 +268,11 @@ dt,dl {
     background-color: #2699fb;
 }
 
-
 #yourPlaylists h2 {
     margin-left: 20px;
     margin-bottom: 0;
     position: absolute;
-    top: 720px;
+    top: 850px;
 }
 
 .playlistItem {
@@ -302,3 +363,33 @@ dt,dl {
 
 
 /*********************************** Footer ******************************************/
+
+
+
+
+
+/*********************************** Scroll *******************************************/
+#trendingSongs::-webkit-scrollbar {
+
+}
+#trendingSongs::-webkit-scrollbar-track {
+
+}
+#trendinSongs::-webkit-scrollbar-thumb {
+
+}
+#trendingSongs::-webkit-scrollbar-thumb:hover {
+
+}
+#yourPlaylists::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+#yourPlaylists::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+#yourPlaylists::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+#yourPlaylists::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
+}
