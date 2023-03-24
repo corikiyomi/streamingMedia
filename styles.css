@@ -152,8 +152,9 @@ dt,dl {
     width: 100%;
     max-width: 834px;
     overflow: scroll;
-    border: 2px solid pink;
     margin-top: 20px;
+    height: 400px;
+    border: 1px solid pink;
 }
 
 #trendingSongs h2 {
@@ -164,6 +165,8 @@ dt,dl {
 }
 
 #trendingSongs button {
+    display: block;
+    position: absolute;
     margin-top: 10px;
     background-color: #590242;
     color: #fff;
@@ -204,6 +207,7 @@ dt {
 #Aloma, #myRoad, #Papaya, #Smoothies, #successfulPerformance {
     position: relative;
     bottom: 100px;
+    margin-right: -10px;
 }
 /*********************************** Your Playlists **********************************/
 
