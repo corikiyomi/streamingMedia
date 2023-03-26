@@ -13,12 +13,19 @@
                 <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
         </header>
         <nav>
+            <!--Hamburger Menu-->
+            <!-- <div id="menuToggle" type="button">
+                <span class="menuLine"></span>
+                <span class="menuLine"></span>
+                <span class="menuLine"></span>
+            </div> -->
+            <!--end menuToggle-->
             <ul>
                 <li class="smallCaps"><a href="#">MuzakMaker</a></li>
-                <li><a href="#">Trending Songs</a></li>
-                <li><a href="#">Your Playlists</a></li>
-                <li><a href="#">Curated Playlists</a></li>
-                <li><a href="#"><img src="images/duke-silver.png" alt="Small icon of Duke Silver"></a></li>
+                <li class="hidden"><a href="#">Trending Songs</a></li>
+                <li class="hidden"><a href="#">Your Playlists</a></li>
+                <li class="hidden"><a href="#">Curated Playlists</a></li>
+                <li class="hidden"><a href="#"><img src="images/duke-silver.png" alt="Small icon of Duke Silver"></a></li>
             </ul>
         </nav>
         <!--***************************Trending Songs***************************-->
@@ -104,65 +111,67 @@
             </section>
             <button class="trending-button" type="button" name="moreTrending">More trending</button>
         <!--***************************Your Playlists***************************-->
-            <h2 id="your-playlist">Your Playlists</h2>
-            <section id="yourPlaylists">
-                <div class="playlistItem">
-                    <a href="#"><img src="images/best-of-2020-cover.png" alt="black album cover with number '2020' written in fire"></a>
-                    <h3>Best of 2020</h3>
-                    <p>The music that got you through the lock down.</p>
-                </div>
-                <div class="playlistItem">
-                    <a href="#"><img src="images/pumpkin-spice-cover.png" alt="pumpkin spice latte in a white ceramic mug with rosette latte art"></a>
-                    <h3>Pumpkin Spice</h3>
-                    <p>Creamy and spicy, just like your favorite autumnal latte.</p>
-                </div>
-                <div class="playlistItem">
-                    <img src="images/quiet-storm-cover.png" alt="blue and purple storm clouds">
-                    <h3>Quiet Storm</h3>
-                    <p>Slow tempos and relaxed rhythms.</p>
-                </div>
-                <div class="playlistItem">
-                    <img src="images/smooth-jazz-cover.png" alt="headshot of artist, man with white hair, glasses, and green sweater">
-                    <h3>Smooth Jazz</h3>
-                    <p>The pioneers of smooth jazz.</p>
-                </div>
-                <div class="playlistItem">
-                    <img src="images/smooth-study-cover.png" alt="person in yellow sweater typing on a laptop">
-                    <h3>Smooth Study</h3>
-                    <p>Background music to keep you going while you study.</p>
-                </div>
-            </section>
-            <button class="playlist-button" type="button" name="yourPlaylists">All your playlists</button>
-        <!--***************************Curated Playlists***************************-->
-            <h2 id="curated-playlist">Curated Playlists</h2>
-            <section id="curatedPlaylists">
-                <div class="playlist-item">
-                    <img src="images/boozy-brunch-cover.png" alt="table of people toasting mimosas at brunch">
-                    <h3>Boozy Brunch</h3>
-                    <p>Light up the afternoon with these energetic hits.</p>
-                </div>
-                <div class="playlist-item">
-                    <img src="images/dinner-party-cover.png" alt="candle lit long dinner table with drinks and dishes">
-                    <h3>Dinner Party</h3>
-                    <p>Background music to give your party life, but allow your guests to chat.</p>
-                </div>
-                <div class="playlist-item">
-                    <img src="images/mellow-cover.png" alt="park bench in the fall with yellow leaves">
-                    <h3>Mellow</h3>
-                    <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
-                </div>
-                <div class="playlist-item">
-                    <img src="images/jazz-chill-cover.png" alt="close up of red rose petals">
-                    <h3>Jazz Chill</h3>
-                    <p>Set the mood with these silky sounds.</p>
-                </div>
-                <div class="playlist-item">
-                    <img src="images/smooth-saxophone-cover.png" alt="table of people toasting mimosas at brunch">
-                    <h3>Smooth Saxophone</h3>
-                    <p>The greatest collection of your sax favorites.</p>
-                </div>
-            </section>
-            <button class="curated-button" type="button" name="moreCurated">More curated</button>
+            <div class="grid">
+                <h2 id="your-playlist">Your Playlists</h2>
+                <section id="yourPlaylists">
+                    <div class="playlistItem">
+                        <a href="#"><img src="images/best-of-2020-cover.png" alt="black album cover with number '2020' written in fire"></a>
+                        <h3>Best of 2020</h3>
+                        <p>The music that got you through the lock down.</p>
+                    </div>
+                    <div class="playlistItem">
+                        <a href="#"><img src="images/pumpkin-spice-cover.png" alt="pumpkin spice latte in a white ceramic mug with rosette latte art"></a>
+                        <h3>Pumpkin Spice</h3>
+                        <p>Creamy and spicy, just like your favorite autumnal latte.</p>
+                    </div>
+                    <div class="playlistItem">
+                        <img src="images/quiet-storm-cover.png" alt="blue and purple storm clouds">
+                        <h3>Quiet Storm</h3>
+                        <p>Slow tempos and relaxed rhythms.</p>
+                    </div>
+                    <div class="playlistItem">
+                        <img src="images/smooth-jazz-cover.png" alt="headshot of artist, man with white hair, glasses, and green sweater">
+                        <h3>Smooth Jazz</h3>
+                        <p>The pioneers of smooth jazz.</p>
+                    </div>
+                    <div class="playlistItem">
+                        <img src="images/smooth-study-cover.png" alt="person in yellow sweater typing on a laptop">
+                        <h3>Smooth Study</h3>
+                        <p>Background music to keep you going while you study.</p>
+                    </div>
+                </section>
+                <button class="playlist-button" type="button" name="yourPlaylists">All your playlists</button>
+            <!--***************************Curated Playlists***************************-->
+                <h2 id="curated-playlist">Curated Playlists</h2>
+                <section id="curatedPlaylists">
+                    <div class="playlist-item">
+                        <img src="images/boozy-brunch-cover.png" alt="table of people toasting mimosas at brunch">
+                        <h3>Boozy Brunch</h3>
+                        <p>Light up the afternoon with these energetic hits.</p>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="images/dinner-party-cover.png" alt="candle lit long dinner table with drinks and dishes">
+                        <h3>Dinner Party</h3>
+                        <p>Background music to give your party life, but allow your guests to chat.</p>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="images/mellow-cover.png" alt="park bench in the fall with yellow leaves">
+                        <h3>Mellow</h3>
+                        <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="images/jazz-chill-cover.png" alt="close up of red rose petals">
+                        <h3>Jazz Chill</h3>
+                        <p>Set the mood with these silky sounds.</p>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="images/smooth-saxophone-cover.png" alt="table of people toasting mimosas at brunch">
+                        <h3>Smooth Saxophone</h3>
+                        <p>The greatest collection of your sax favorites.</p>
+                    </div>
+                </section>
+                <button class="curated-button" type="button" name="moreCurated">More curated</button>
+            </div>
         </main>
         <footer>
             <small>Copyright 2022 Smooth Jazz</small>

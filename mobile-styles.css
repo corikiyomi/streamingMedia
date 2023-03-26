@@ -19,9 +19,8 @@ html {
 body {
     margin: 0 auto;
     padding: 0;
-    width: 30em;
-    max-width: 100vw;
-    min-width: 479px;
+    max-width: 834px;
+    min-width: 375px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #fff;
 }
@@ -83,15 +82,22 @@ header h1 {
 
 /* NAV */
 
+nav {
+    display: block;
+}
+
 nav ul {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
     list-style: none;
     margin: 0 auto;
     background-color: #030a8c;
     height: 40px;
     padding: 10px 0 10px 0;
     position: relative;
-    top: -178px;
+    top: -191px;
 }
 
 nav a {
@@ -110,25 +116,30 @@ nav li {
     text-transform: lowercase;
     font-variant: small-caps;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .smallCaps {
     text-transform: capitalize;
+    display: block;
     font-size: 1.5em;
     font-weight: bold;
-    padding-left: 0.5em;
     padding-top: 0.125em;
 }
 
+.hidden {
+    display: none;
+}
+
+/* HAMBURGER MENU */
 
 /* TRENDING SONGS */
 
 #trendingSongs {
     margin: 0 auto;
-    width: 97.5%;
+    width: 97%;
     height: 24em;
-    margin-left: 12px;
+    margin-left: 11px;
     color: #590242;
     /* display: flex; */
     display: grid;
@@ -150,7 +161,7 @@ nav li {
 
 .trending-button {
     position: relative;
-    left: 22em;
+    left: 2em;
     top: 1em;
 }
 
@@ -234,7 +245,7 @@ figure {
 
 .playlist-button {
     position: relative;
-    left: 4em;
+    left: 2em;
     top: 1em;
 }
 
@@ -282,7 +293,7 @@ figure {
 
 .curated-button {
     position: relative;
-    left: 4em;
+    left: 2em;
     top: 1em;
 }
 /* FOOTER */
@@ -349,9 +360,120 @@ audio::-webkit-media-controls-enclosure {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 580px) { /* breakpoint - nav expand */
-    html {
-        /* background-color: #000; */
+@media screen and (max-width: 500px) { /* breakpoint - nav expand */
+    body {
+        min-width: 375px;
     }
+
+
+    /* body {
+        width: 60vw;
+    } */
 }
 
+@media screen and (min-width: 541px) {
+
+    body {
+        width: 80vw;
+    }
+
+    .trending-button {
+        position: relative;
+        left: 55%;
+    }
+
+    /* .hidden {
+        display: contents;
+    }
+
+    nav ul {
+        position: relative;
+        top: -176px;
+        height: 45px;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .smallCaps {
+        padding-left: 0.5em;
+        font-size: 1.5rem;
+    }
+
+    body {
+        width: 75vw;
+    } */
+
+}
+
+@media screen and (min-width: 650px) { 
+    .trending-button {
+        position: relative;
+        left: 65%;
+    }
+
+    .grid {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #your-playlist {
+        grid-column: 1 / 2;
+    }
+
+    #yourPlaylists {
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 300px;
+    }
+
+    .playlistItem {
+        display: inline-block;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .playlistItem img {
+        float: left;
+    }
+
+    .playlist-button {
+        grid-column: 1 / 2;
+        height: 3em;
+    }
+
+    #curated-playlist {
+        grid-column: 2 / 3;
+    }
+
+    #curatedPlaylists {
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 300px;
+    }
+
+    .playlist-item {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .playlist-item img {
+        float: left;
+    }
+
+    .curated-button {
+        grid-column: 2 / 3;
+        height: 3em;
+    }
+
+    
+}
