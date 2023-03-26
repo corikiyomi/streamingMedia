@@ -13,21 +13,34 @@ black: #000000; */
 /* GLOBAL STYLES */
 
 body {
-    height: 1020px;
-    max-height: 100vh;
-    width: 480px;
+    margin: 0 auto;
+    padding: 0;
+    /* height: 1020px; */
+    /* max-height: 100vh; */
+    width: 30em;
     max-width: 100vw;
-    border: 2px solid black;
-    margin: 10px auto;
+    /* border: 2px solid black; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 40em) { /* breakpoint - nav expand */
+    html {
+        background-color: #020659;
+    }
 }
 
 h1 {
     font-size: 1.25em;
 }
 
+h2 {
+    color: #590242;
+}
+
 h2, h3 {
     font-size: 1em;
+    text-transform: uppercase;
 }
 
 p, dl, dd {
@@ -36,6 +49,18 @@ p, dl, dd {
 
 footer p {
     font-size: 0.75em;
+}
+
+button {
+    background-color: #590242;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    width: 10rem;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* HEADER */
@@ -78,22 +103,180 @@ nav a {
 }
 
 nav img {
-    padding-right: 15px;
-    padding-top: 3px;
+    padding-right: 0.5em;
+    padding-top: 0.125em;
+}
+
+nav li {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    text-align: center;
+    justify-content: center;
 }
 
 .smallCaps {
-    font-variant: small-caps;
-    font-size: 2em;
+    text-transform: capitalize;
+    font-size: 1.5em;
     font-weight: bold;
+    padding-left: 0.5em;
+    padding-top: 0.125em;
 }
 
 /* TRENDING SONGS */
 
+#trendingSongs {
+    margin: 0 auto;
+    width: 97.5%;
+    height: 24em;
+    margin-left: 12px;
+    color: #590242;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#trendingSongs h2 {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+}
+
+#trendingSongs img {
+    position: relative;
+    bottom: 50px;
+}
+
+.trending-button {
+    position: relative;
+    left: 22em;
+    top: 1em;
+}
+
+.songInfo {
+    display: block;
+    background: lightgray;
+    opacity: 70%;
+    width: 311px;
+    position: relative;
+    top: 277px;
+    z-index: 1;
+}
+.songTitle {
+    padding-left: 1em;
+    padding-top: 0.5em;
+    display: block;
+}
+
+dl {
+    display: flex;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+
+dt {
+    font-style: italic;
+}
+
+dd {
+    margin-left: 10px;
+}
+
+figure {
+    opacity: 50%;
+    position: relative;
+    bottom: 270px;
+    right: 35px;
+}
+
+#Aloma, #myRoad, #Papaya, #Smoothies, #successfulPerformance {
+    width: 330px;
+}
+
 /* YOUR PLAYLISTS */
+
+#your-playlist {
+    padding-top: 1.5em;
+    padding-left: 1em;
+}
+
+#yourPlaylists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #0d8dfb;
+    padding: 10px 10px 20px 10px;
+}
+
+.playlistItem {
+    display: block;
+    padding-top: 8px;
+    border-radius: 8px;
+    width: 10rem;
+    background-color: #2688fb;
+    text-align: center;
+    color: #fff;
+}
+
+.playlistItem p {
+    font-size: 0.75rem;
+    padding: 0 10px;
+}
+
+.playlist-button {
+    position: relative;
+    left: 4em;
+    top: 1em;
+}
 
 /* CURATED PLAYLISTS */
 
+#curated-playlist {
+    padding-top: 1.5em;
+    padding-left: 1em;
+}
+
+#curatedPlaylists{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 1em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #030a8c;
+    padding: 10px 10px 20px 10px;
+}
+
+.playlist-item {
+    display: block;
+    padding: 8px 3px 4px 3px;
+    border-radius: 8px;
+    width: 10rem;
+    text-align: center;
+    color: #fff;
+    background-color: #020873;
+}
+
+.playlist-item p {
+    font-size: 0.75rem;
+    padding: 0 10px;
+}
+
+.curated-button {
+    position: relative;
+    left: 4em;
+    top: 1em;
+}
 /* FOOTER */
+
+footer {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    color: #590242;
+    padding: 15px;
+}
 
 /* MEDIA QUERIES */
