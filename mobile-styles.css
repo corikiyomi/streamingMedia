@@ -74,6 +74,7 @@ header {
     padding: 5px 10px 5px 30px;
     color: #fff;
     background-image: linear-gradient(to right, #2104D9, #000)
+    
 }
 
 header h1 {
@@ -94,10 +95,10 @@ nav ul {
     list-style: none;
     margin: 0 auto;
     background-color: #030a8c;
-    height: 40px;
+    height: 45px;
     padding: 10px 0 10px 0;
     position: relative;
-    top: -191px;
+    top: -160px;
 }
 
 nav a {
@@ -116,22 +117,103 @@ nav li {
     text-transform: lowercase;
     font-variant: small-caps;
     text-align: center;
+    align-items: center;
     justify-content: space-between;
+    padding-top: 10px;
 }
 
 .smallCaps {
     text-transform: capitalize;
-    display: block;
     font-size: 1.5em;
     font-weight: bold;
-    padding-top: 0.125em;
+    padding-top: 20px;
 }
 
 .hidden {
-    display: none;
+    width: 60px;
 }
 
 /* HAMBURGER MENU */
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid pink;
+    padding: 14px;
+    position: relative;
+    z-index: 2;
+    top: 5px;
+    left: 90px;
+}
+
+/* .hidden {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease;
+} */
+
+/* label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+label span {
+    background-color: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+    width: 18px;
+    border: 1px solid pink;
+}
+
+label span:before, label span:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: 5px;
+}
+
+label span:after {
+    top: -5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ ul {
+    max-height: 500px;
+}
+
+input:checked ~ label span {
+    background: transparent;
+}
+
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+
+input:checked ~label:not(.steps) span::before, input:checked ~ label:not(.steps) span::after {
+    top: 0;
+} */
+
+
+
 
 /* TRENDING SONGS */
 
@@ -141,7 +223,6 @@ nav li {
     height: 24em;
     margin-left: 11px;
     color: #590242;
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     overflow-x: scroll;
@@ -306,8 +387,6 @@ footer {
     padding: 15px;
 }
 
-/* CUSTOM SCROLL BAR STYLES */
-
 /* SCROLL BAR */
 
 audio::-webkit-media-controls-mute-button {
@@ -360,15 +439,10 @@ audio::-webkit-media-controls-enclosure {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 540px) { /* breakpoint - nav expand */
+@media screen and (max-width: 540px) {
     body {
         max-width: 375px;
     }
-
-
-    /* body {
-        width: 60vw;
-    } */
 }
 
 @media screen and (min-width: 541px) {
@@ -377,35 +451,36 @@ audio::-webkit-media-controls-enclosure {
         width: 80vw;
     }
 
+    nav ul {
+        position: relative;
+        top: -140px;
+    }
+
     .trending-button {
         position: relative;
         left: 55%;
     }
-
-    /* .hidden {
-        display: contents;
-    }
-
-    nav ul {
-        position: relative;
-        top: -176px;
-        height: 45px;
-        width: 100%;
-        padding-top: 10px;
-    }
-
-    .smallCaps {
-        padding-left: 0.5em;
-        font-size: 1.5rem;
-    }
-
-    body {
-        width: 75vw;
-    } */
-
 }
 
-@media screen and (min-width: 760px) { 
+@media screen and (max-width: 639px) {
+    nav {
+        position: relative;
+        top: -35px;
+    }
+}
+
+@media screen and (max-width: 759px) {
+    .hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 760px) { /* expand nav, playlist columns */
+
+    .hidden {
+        display: block;
+    }
+
     .trending-button {
         position: relative;
         left: 65%;
@@ -476,6 +551,12 @@ audio::-webkit-media-controls-enclosure {
     .curated-button {
         grid-column: 2 / 3;
         height: 3em;
+    }    
+}
+
+@media screen and (max-width: 919px) {
+    nav {
+        position: relative;
+        bottom: 15px;
     }
-    
 }
