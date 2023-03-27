@@ -135,85 +135,52 @@ nav li {
 
 /* HAMBURGER MENU */
 
-label {
-    cursor: pointer;
-    display: inline-block;
-    border: 1px solid pink;
-    padding: 14px;
-    position: relative;
-    z-index: 2;
-    top: 5px;
-    left: 90px;
-}
-
-/* .hidden {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s ease;
-} */
-
-/* label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-
-label span {
-    background-color: #fff;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background-color 0.2s ease-out;
-    width: 18px;
-    border: 1px solid pink;
-}
-
-label span:before, label span:after {
-    background: #fff;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    width: 100%;
-}
-
-label span:before {
-    top: 5px;
-}
-
-label span:after {
-    top: -5px;
-}
-
 input {
     display: none;
 }
 
-input:checked ~ ul {
-    max-height: 500px;
+label {
+    height: 0;
 }
 
-input:checked ~ label span {
-    background: transparent;
+.navbar-toggle {
+    cursor: pointer;
+    display: grid !important;
+    /* height: min-content; */
+    margin: 0 0 0 18px;
 }
 
-input:checked ~ label span:before {
-    transform: rotate(-45deg);
+.navbar-toggle > .bar {
+    width: 30px;
+    height: 3px;
+    padding: 0;
+    margin-bottom: 6px;
+    background-color: white;
+    border-radius: 10%;
+    position: relative;
+    bottom: 115px;
+    z-index: 100;
+    transition: 0.5s ease;
 }
 
-input:checked ~ label span:after {
+input:checked ~ .navbar-toggle {
+    position: relative;
+    top: 15px;
+}
+
+input:checked ~ .navbar-toggle > .bar:nth-child(1) {
+    position: absolute;
     transform: rotate(45deg);
 }
 
-input:checked ~label:not(.steps) span::before, input:checked ~ label:not(.steps) span::after {
-    top: 0;
-} */
+input:checked ~ .navbar-toggle > .bar:nth-child(2) {
+    opacity: 0;
+}
 
-
-
+input:checked ~ .navbar-toggle > .bar:nth-child(3) {
+    position: absolute;
+    transform: rotate(-45deg);
+}
 
 /* TRENDING SONGS */
 
@@ -355,6 +322,7 @@ figure {
 .playlist-item {
     display: block;
     padding: 8px 3px 4px 3px;
+    margin-bottom:5px;
     border-radius: 8px;
     width: 10rem;
     text-align: center;
@@ -370,6 +338,10 @@ figure {
 .playlist-item p {
     font-size: 0.75rem;
     padding: 0 10px;
+}
+
+.playlist-item img {
+    padding: 5px;
 }
 
 .curated-button {
@@ -443,6 +415,17 @@ audio::-webkit-media-controls-enclosure {
     body {
         max-width: 375px;
     }
+
+    .navbar-toggle {
+        width: fit-content;
+        position: relative;
+        bottom: 20px;
+    }
+
+    input:checked ~ .navbar-toggle {
+        position: relative;
+        top: 1px;
+    }
 }
 
 @media screen and (min-width: 541px) {
@@ -479,6 +462,10 @@ audio::-webkit-media-controls-enclosure {
 
     .hidden {
         display: block;
+    }
+
+    .navbar-toggle > .bar {
+        display: none;
     }
 
     .trending-button {
