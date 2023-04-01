@@ -6,10 +6,9 @@ blue700: #030A8C;
 blue600: #21049D;
 lightBlue: #2699FB;
 lightestBlue: #0D8DFB;
-maroon: #590242; */
+black: #000000; */
 
 /* GLOBAL STYLES */
-
 html {
     background-color: #020659;
     margin: 0 auto;
@@ -45,10 +44,6 @@ footer p {
     font-size: 0.75em;
 }
 
-a {
-    cursor: pointer;
-}
-
 button {
     background-color: #590242;
     color: #fff;
@@ -77,6 +72,7 @@ header {
     padding: 5px 10px 5px 30px;
     color: #fff;
     background-image: linear-gradient(to right, #2104D9, #000)
+    
 }
 
 header h1 {
@@ -87,7 +83,7 @@ header h1 {
 
 nav {
     display: block;
-    height: 80px;
+    height: 70px;
 }
 
 nav ul {
@@ -101,7 +97,7 @@ nav ul {
     height: 45px;
     padding: 10px 0 10px 0;
     position: relative;
-    top: -214px;
+    top: -160px;
 }
 
 nav a {
@@ -129,55 +125,49 @@ nav li {
     text-transform: capitalize;
     font-size: 1.5em;
     font-weight: bold;
-    padding: 10px;
-    position: relative;
-    left: 100px;
-    top: 5px;
+    padding-top: 20px;
+}
+
+.hidden {
+    width: 60px;
 }
 
 /* HAMBURGER MENU */
 
-.menu {
-    /* overflow: hidden; */
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 14px;
     position: relative;
-    top: 20px;
-    left: 2px;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-}
-
-.menu li {
-    background-color:#030a8c;
-    width: 200px;
+    z-index: 2;
+    top: 5px;
+    left: 90px;
 }
 
 label {
     cursor: pointer;
     display: inline-block;
-    padding: 25px 20px;
+    padding: 28px 20px;
     position: relative;
     user-select: none;
-    border: 1px solid pink;
-    bottom: 132px;
-    z-index: 100;
 }
 
 label span {
-    background-color: #ffffff;
+    background-color: #fff;
     display: block;
     height: 2px;
     position: relative;
-    transition: background-color .2s ease-out;
+    transition: background-color 0.2s ease-out;
     width: 18px;
 }
 
 label span:before, label span:after {
-    background: #ffffff;
+    background: #fff;
     content: '';
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     width: 100%;
 }
 
@@ -193,73 +183,26 @@ input {
     display: none;
 }
 
-input:checked ~ .menu {
+input:checked ~ ul {
     max-height: 500px;
-    overflow: visible;
 }
 
 input:checked ~ label span {
     background: transparent;
 }
 
-input:checked ~ label span::before {
+input:checked ~ label span:before {
     transform: rotate(-45deg);
 }
 
-input:checked ~ label span::after {
+input:checked ~ label span:after {
     transform: rotate(45deg);
 }
 
-input:checked ~ label:not(.steps) span::before, 
-input:checked ~ label:not(.steps) span::after {
+input:checked ~label:not(.steps) span::before, input:checked ~ label:not(.steps) span::after {
     top: 0;
 }
 
-/* input {
-    display: none;
-}
-
-label {
-    height: 0;
-}
-
-.navbar-toggle {
-    cursor: pointer;
-    display: grid !important;
-    margin: 0 0 0 18px;
-}
-
-.navbar-toggle > .bar {
-    width: 30px;
-    height: 3px;
-    padding: 0;
-    margin-bottom: 6px;
-    background-color: white;
-    border-radius: 10%;
-    position: relative;
-    bottom: 115px;
-    z-index: 100;
-    transition: 0.5s ease;
-}
-
-input:checked ~ .navbar-toggle {
-    position: relative;
-    top: 15px;
-}
-
-input:checked ~ .navbar-toggle > .bar:nth-child(1) {
-    position: absolute;
-    transform: rotate(45deg);
-}
-
-input:checked ~ .navbar-toggle > .bar:nth-child(2) {
-    opacity: 0;
-}
-
-input:checked ~ .navbar-toggle > .bar:nth-child(3) {
-    position: absolute;
-    transform: rotate(-45deg);
-} */
 
 /* TRENDING SONGS */
 
@@ -401,7 +344,6 @@ figure {
 .playlist-item {
     display: block;
     padding: 8px 3px 4px 3px;
-    margin-bottom:5px;
     border-radius: 8px;
     width: 10rem;
     text-align: center;
@@ -417,10 +359,6 @@ figure {
 .playlist-item p {
     font-size: 0.75rem;
     padding: 0 10px;
-}
-
-.playlist-item img {
-    padding: 5px;
 }
 
 .curated-button {
@@ -497,22 +435,13 @@ audio::-webkit-media-controls-enclosure {
 
     nav ul {
         position: relative;
-        top: -196px;
-    }
-
-    input:checked ~ .menu li {
-        position: absolute;
-        background-color:#0d8dfb;
-        width: 200px;
-    }
-
-    input .menu {
-        display: none;
+        top: -222px;
     }
 
     label {
         position: relative;
-        top: -132px;
+        top: -154px;
+        left: 0px;
     }
 }
 
@@ -524,7 +453,7 @@ audio::-webkit-media-controls-enclosure {
 
     nav ul {
         position: relative;
-        top: -180px;
+        top: -205px;
     }
 
     .trending-button {
@@ -534,42 +463,31 @@ audio::-webkit-media-controls-enclosure {
 
     label {
         position: relative;
-        top: -115px;
+        top: -135px;
+        left: 0px;
     }
 }
 
-/* @media screen and (width: 638px) {
+@media screen and (max-width: 639px) {
     nav {
         position: relative;
-        top: 0px;
+        top: -35px;
     }
-} */
+}
 
-@media screen and (max-width: 639px) {
-    nav ul {
-        position: relative;
-        top: -215px;
-    }
-
-    label {
-        position: relative;
-        top: -150px;
+@media screen and (max-width: 759px) {
+    .hidden {
+        display: none;
     }
 }
 
 @media screen and (min-width: 760px) { /* expand nav, playlist columns */
-    nav {
-        position: relative;
-        top: 60px;
+
+    .hidden {
+        display: block;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap:;
-    }
-
-    label {
+    label span {
         display: none;
     }
 
@@ -644,11 +562,16 @@ audio::-webkit-media-controls-enclosure {
         grid-column: 2 / 3;
         height: 3em;
     }    
+
+    nav ul {
+        position: relative;
+        top: -205px;
+    }
 }
 
-/* @media screen and (max-width: 919px) {
+@media screen and (min-width: 919px) {
     nav {
         position: relative;
-        bottom: 15px;
+        bottom: -7px;
     }
-} */
+}
