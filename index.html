@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="mobile-styles.css">
+        <link rel="stylesheet" href="styles.css">
         <title>MuzakMaker</title>
     </head>
     <body>
@@ -13,20 +13,16 @@
                 <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
         </header>
         <nav>
-            <input type="checkbox" id="toggle">
-
-            <label class="navbar-toggle" for="toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </label>
-
+            <input type="checkbox" id="dropdown" />
+            <label for="dropdown"><span></span></label>
             <ul>
-                <li class="smallCaps"><a href="#">MuzakMaker</a></li>
-                <li class="hidden"><a href="#">Trending Songs</a></li>
-                <li class="hidden"><a href="#">Your Playlists</a></li>
-                <li class="hidden"><a href="#">Curated Playlists</a></li>
-                <li class="hidden"><a href="#"><img src="images/duke-silver.png" alt="Small icon of Duke Silver"></a></li>
+                <li class="smallCaps"><a href="#home">MuzakMaker</a></li>
+                <div class="menu">
+                    <li><a href="#trendingSongs">Trending<br/>Songs</a></li>
+                    <li><a href="#yourPlaylists">Your<br/>Playlists</a></li>
+                    <li><a href="#curatedPlaylists">Curated<br/>Playlists</a></li>
+                    <li><a href="#user"><img src="images/duke-silver.png" alt="user profile picture"></a></li>
+                </div>
             </ul>
         </nav>
         
@@ -34,82 +30,80 @@
         <main>
             <section id="trendingSongs">
                 <h2>Trending Songs</h2>
-                <!-- <div class="sroll-wrapper"> -->
-                    <div id="Aloma">
-                        <div class="songInfo">
-                            <h3 class="songTitle">Aloma</h3>
-                            <dl>
-                                <dt>Artist</dt>
-                                <dd>Cali</dd>
-                            </dl>
-                        </div>
-                        <img src="images/aloma-cover.png" alt="black album cover with a white dove">
-                        <figure>
-                            <audio controls src="media/aloma.mp3"><a href="media/aloma.mp3">Aloma</a>
-                            </audio>
-                        </figure>
+                <div id="Aloma">
+                    <div class="songInfo">
+                        <h3 class="songTitle">Aloma</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Cali</dd>
+                        </dl>
                     </div>
-                    <div id="myRoad">
-                        <div class="songInfo">
-                            <h3 class="songTitle">My Road</h3>
-                            <dl>
-                                <dt>Artist</dt>
-                                <dd>Nesterouk</dd>
-                            </dl>
-                        </div>
-                        <img src="images/my-road-cover.png" alt="long stretch of empty road">
-                        <figure>
-                            <audio controls src="media/my-road.mp3">
-                                <a href="media/my-road.mp3">My Road</a>
-                            </audio>
-                        </figure>
+                    <img src="images/aloma-cover.png" alt="black album cover with a white dove">
+                    <figure>
+                        <audio controls src="media/aloma.mp3"><a href="media/aloma.mp3">Aloma</a>
+                        </audio>
+                    </figure>
+                </div>
+                <div id="myRoad">
+                    <div class="songInfo">
+                        <h3 class="songTitle">My Road</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Nesterouk</dd>
+                        </dl>
                     </div>
-                    <div id="Papaya">
-                        <div class="songInfo">
-                            <h3 class="songTitle">Papaya</h3>
-                            <dl>
-                                <dt>Artist</dt>
-                                <dd>Dredstudio</dd>
-                            </dl>
-                        </div>
-                        <img src="images/papaya-cover.png" alt="papaya cut in half">
-                        <figure>
-                            <audio controls src="media/papaya.mp3">
-                                <a href="media/papaya.mp3">Papaya</a>
-                            </audio>
-                        </figure>
+                    <img src="images/my-road-cover.png" alt="long stretch of empty road">
+                    <figure>
+                        <audio controls src="media/my-road.mp3">
+                            <a href="media/my-road.mp3">My Road</a>
+                        </audio>
+                    </figure>
+                </div>
+                <div id="Papaya">
+                    <div class="songInfo">
+                        <h3 class="songTitle">Papaya</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Dredstudio</dd>
+                        </dl>
                     </div>
-                    <div id="Smoothies">
-                        <div class="songInfo">
-                            <h3 class="songTitle">Smoothies</h3>
-                            <dl>
-                                <dt>Artist</dt>
-                                <dd>Black Rhomb</dd>
-                            </dl>
-                        </div>
-                        <img src="images/smoothies-cover.png" alt="table of tropical fruits and a smoothie">
-                        <figure>
-                            <audio controls src="media/smoothies.mp3">
-                                <a href="media/smoothies.mp3">My Road</a>
-                            </audio>
-                        </figure>
+                    <img src="images/papaya-cover.png" alt="papaya cut in half">
+                    <figure>
+                        <audio controls src="media/papaya.mp3">
+                            <a href="media/papaya.mp3">Papaya</a>
+                        </audio>
+                    </figure>
+                </div>
+                <div id="Smoothies">
+                    <div class="songInfo">
+                        <h3 class="songTitle">Smoothies</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Black Rhomb</dd>
+                        </dl>
                     </div>
-                    <div id="successfulPerformance">
-                        <div class="songInfo">
-                            <h3 class="songTitle">Successful Performance</h3>
-                            <dl>
-                                <dt>Artist</dt>
-                                <dd>Ricky Bombino</dd>
-                            </dl>
-                        </div>
-                        <img src="images/successful-performance-cover.png" alt="Ricky Bombino smiling">
-                        <figure>
-                            <audio controls src="media/successful-performance.mp3">
-                                <a href="media/successful-performance.mp3">My Road</a>
-                            </audio>
-                        </figure>
+                    <img src="images/smoothies-cover.png" alt="table of tropical fruits and a smoothie">
+                    <figure>
+                        <audio controls src="media/smoothies.mp3">
+                            <a href="media/smoothies.mp3">My Road</a>
+                        </audio>
+                    </figure>
+                </div>
+                <div id="successfulPerformance">
+                    <div class="songInfo">
+                        <h3 class="songTitle">Successful Performance</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Ricky Bombino</dd>
+                        </dl>
                     </div>
-                <!-- </div> -->
+                    <img src="images/successful-performance-cover.png" alt="Ricky Bombino smiling">
+                    <figure>
+                        <audio controls src="media/successful-performance.mp3">
+                            <a href="media/successful-performance.mp3">My Road</a>
+                        </audio>
+                    </figure>
+                </div>
             </section>
             <button class="trending-button" type="button" name="moreTrending">More trending</button>
         <!--***************************Your Playlists***************************-->
